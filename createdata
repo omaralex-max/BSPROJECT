@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# --------------------------Enter the data
+read -p "Please Enter Database Name: " data_name
+
+# if data already exist enter the data if not create it and enter 
+if [ -d "$data_name" ]; then
+    echo
+    echo "Data Already Exists!"
+    cd $data_name
+else
+    mkdir $data_name
+    echo
+    echo "Data Created Successfully"
+    cd $data_name
+fi
+echo
+
+
